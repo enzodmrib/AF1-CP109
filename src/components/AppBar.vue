@@ -1,54 +1,171 @@
 <template>
-  <div>
-    <v-app-bar color="#fff">
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-navigation-drawer v-model="drawer" app absolute temporary>
-        <v-list-item>
-          <v-list-item-avatar>
-            <v-img src="..\assets\logo.png"></v-img>
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <v-list-item-title>Vue</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-divider></v-divider>
-
-        <v-list dense>
-          <v-list-item v-for="item in items" :key="item.title" link>
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-
-      <v-spacer></v-spacer>
-      <span>Enzo de Moraes Ribeiro 190942</span>
-      <v-spacer></v-spacer>
+  <nav id="navbar">
+    <v-app-bar class="white" flat app clipped-left>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title class="font-weight-bold"
+        ><router-link
+          to="/"
+          class="black--text"
+          style="text-decoration: none"
+        ></router-link
+      ></v-toolbar-title>
+      Enzo Ribeiro | 190942
     </v-app-bar>
-  </div>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      :clipped="$route.name !== 'Watch'"
+      :temporary="$route.name === 'Watch'"
+      id="nav"
+    >
+      <div tag="div" class="v-navigation-drawer__content" v-bar>
+        <v-list dense nav class="py-0" tag="div">
+          <v-list-item
+            :class="{
+              'hidden-lg-and-up': $route.name === 'Watch' ? false : true,
+            }"
+          >
+            <v-app-bar-nav-icon
+              @click="drawer = !drawer"
+              class="mr-5"
+            ></v-app-bar-nav-icon>
+            <v-toolbar-title class="font-weight-bold">FACENS</v-toolbar-title>
+          </v-list-item>
+
+          <span class="mb-2 d-block link-nav-title"></span>
+
+          <span v-for="link in links" :key="link.text" class="link-nav">
+            <v-btn
+              href
+              router
+              :to="link.link"
+              text
+              class="text-capitalize px-1"
+              small
+              >{{ link.text }}</v-btn
+            >
+          </span>
+        </v-list>
+      </div>
+    </v-navigation-drawer>
+  </nav>
 </template>
 
 <script>
 export default {
-  name: "AppBar",
-
-  data () {
-      return {
-        drawer: false,
-        items: [
-          { title: 'Home', icon: 'mdi-view-dashboard' },
-          { title: 'About', icon: 'mdi-forum' },
-        ],
-      }
-    },
+  data: () => ({
+    drawer: false,
+    links: [
+      { text: "Home", link: "/" },
+      { text: "About", link: "/about" },
+      { text: "Configuration", link: "/config" },
+      { text: "List", link: "/list" },
+    ],
+  }),
   methods: {},
+  mounted() {
+    this.drawer = this.$vuetify.breakpoint.mdAndDown ? false : true;
+  },
 };
 </script>
+
+<style lang="scss">
+#navbar {
+  .active-item {
+    .v-list-item__icon {
+      color: red !important;
+    }
+  }
+  .v-navigation-drawer__border {
+    width: 0 !important;
+  }
+
+  .vuebar-element {
+    height: 250px;
+    width: 100%;
+    max-width: 500px;
+    background: #dfe9fe;
+  }
+
+  .vb > .vb-dragger {
+    z-index: 5;
+    width: 10px;
+    right: 0;
+  }
+
+  .vb > .vb-dragger > .vb-dragger-styler {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(0, 0, 0, 0);
+    -webkit-transition: background-color 100ms ease-out, margin 100ms ease-out,
+      height 100ms ease-out;
+    transition: background-color 100ms ease-out, margin 100ms ease-out,
+      height 100ms ease-out;
+
+    margin: 5px 5px 5px 0;
+    border-radius: 20px;
+    height: calc(100% - 10px);
+    display: block;
+  }
+
+  .v-navigation-drawer__content:hover .vb > .vb-dragger > .vb-dragger-styler {
+    width: 10px;
+    background-color: #e0e0e0;
+  }
+
+  .vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .vb > .vb-dragger:hover > .vb-dragger-styler {
+    margin: 0px;
+    width: 10px;
+  }
+
+  .vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244, 0.5);
+    margin: 0px;
+    height: 100%;
+  }
+
+  .vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(48, 121, 244, 0.5);
+  }
+
+  header.v-toolbar {
+    top: 30px;
+  }
+
+  span.link-nav {
+    color: #333;
+    width: 100%;
+    display: block;
+
+    &-title {
+      font-size: 1.3rem;
+      margin: 2rem 0 0.5rem;
+    }
+
+    &:first-of-type {
+    }
+    a {
+      width: 100%;
+    }
+
+    .v-btn__content {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+</style>

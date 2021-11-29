@@ -1,9 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import SystemBar from '../components/SystemBar.vue'
-import AppBar from '../components/AppBar.vue'
-import Footer from '../components/Footer.vue'
-import BottomNavigation from '../components/BottomNavigation.vue'
 
 Vue.use(VueRouter)
 
@@ -12,13 +8,24 @@ const routes = [
     path: '/',
     name: 'Home',
     components: {
-      SystemBar, 
-      AppBar,
-      Footer,
-      BottomNavigation,
-      default: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
-    } 
+      default: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
+    }
   },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/list',
+    name: 'List',
+    component: () => import(/* webpackChunkName: "listpokemon" */ '../views/List.vue')
+  },
+  {
+    path: '/config',
+    name: 'Configuration',
+    component: () => import(/* webpackChunkName: "pokemon" */ '../views/Configuration.vue')
+  }
 ]
 
 const router = new VueRouter({

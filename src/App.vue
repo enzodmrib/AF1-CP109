@@ -1,24 +1,30 @@
 <template>
   <v-app>
-    <router-view name="SystemBar"/>
-    <router-view name="AppBar"/>
+    <SystemBar></SystemBar>
+    <AppBar></AppBar>
     <v-content :class="{ 'content-bg': true }">
       <router-view></router-view>
     </v-content>
-    <router-view name="Footer"/>
-    <router-view name="BottomNavigation"/>
+    <Footer></Footer>
+    <BottomNavigation></BottomNavigation>
   </v-app>
 </template>
 
 <script>
+import SystemBar from '@/components/SystemBar.vue'
+import AppBar from '@/components/AppBar.vue'
+import Footer from '@/components/Footer.vue'
+import BottomNavigation from '@/components/BottomNavigation.vue'
 
 export default {
   name: 'App',
-
-  data: () => ({
-    //
-  }),
-};
+  components: {
+      SystemBar,
+      AppBar,
+      Footer,
+      BottomNavigation,
+  },
+}
 </script>
 
 <style>
