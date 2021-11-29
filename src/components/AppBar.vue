@@ -30,7 +30,6 @@
               @click="drawer = !drawer"
               class="mr-5"
             ></v-app-bar-nav-icon>
-            <v-toolbar-title class="font-weight-bold">FACENS</v-toolbar-title>
           </v-list-item>
 
           <span class="mb-2 d-block link-nav-title"></span>

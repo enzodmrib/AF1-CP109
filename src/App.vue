@@ -11,20 +11,20 @@
 </template>
 
 <script>
-import SystemBar from '@/components/SystemBar.vue'
-import AppBar from '@/components/AppBar.vue'
-import Footer from '@/components/Footer.vue'
-import BottomNavigation from '@/components/BottomNavigation.vue'
+import SystemBar from "@/components/SystemBar.vue";
+import AppBar from "@/components/AppBar.vue";
+import Footer from "@/components/Footer.vue";
+import BottomNavigation from "@/components/BottomNavigation.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-      SystemBar,
-      AppBar,
-      Footer,
-      BottomNavigation,
+    SystemBar,
+    AppBar,
+    Footer,
+    BottomNavigation,
   },
-}
+};
 </script>
 
 <style>

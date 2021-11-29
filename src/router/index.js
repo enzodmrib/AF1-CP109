@@ -19,12 +19,12 @@ const routes = [
   {
     path: '/list',
     name: 'List',
-    component: () => import(/* webpackChunkName: "listpokemon" */ '../views/List.vue')
+    component: () => import(/* webpackChunkName: "list" */ '../views/List.vue')
   },
   {
     path: '/config',
     name: 'Configuration',
-    component: () => import(/* webpackChunkName: "pokemon" */ '../views/Configuration.vue')
+    component: () => import(/* webpackChunkName: "configurations"" */ '../views/Configuration.vue')
   }
 ]
 

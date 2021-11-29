@@ -5,22 +5,20 @@
 </template>
 
 <script>
-  export default {
-    name: 'Home',
+export default {
+  name: "Home",
 
-    components: {
-    },
-  }
+  components: {},
+};
 </script>
 
 <style>
-  .main {
-    text-align: center;
-    color: #ebebeb;
-  }
-  .v-responsive {
-    top: 200px;
-    left: 865px;
-  }
-  
+.main {
+  text-align: center;
+  color: #ebebeb;
+}
+.v-responsive {
+  top: 200px;
+  left: 865px;
+}
 </style>

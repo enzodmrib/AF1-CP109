@@ -8,9 +8,7 @@
         :src="framework.framework.$attrs.framework.imageSrc"
         alt="Framework"
       />
-      <div v-if="!!framework" class="card__name">
-        {{ framework.framework.$attrs.framework.name }}
-      </div>
+      <div v-if="!!framework" class="card__name"></div>
     </div>
   </v-card>
 </template>
