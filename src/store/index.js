@@ -14,17 +14,17 @@ export default new Vuex.Store({
       {
         id: 2,
         name: "React",
-        imageSrc: "https://banner2.cleanpng.com/20180604/pol/kisspng-react-javascript-angularjs-ionic-atom-5b154be6709500.6532453515281223424611.jpg",
+        imageSrc: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
       },
       {
         id: 3,
         name: "Ember",
-        imageSrc: "https://w7.pngwing.com/pngs/531/388/png-transparent-ember-js-logo-javascript-library-software-framework-meetup-logo-love-text-logo.png",
+        imageSrc: "https://emberjs.com/images/brand/ember-4c.svg",
       },
       {
         id: 4,
         name: "Meteor",
-        imageSrc: "https://w7.pngwing.com/pngs/542/839/png-transparent-meteor-javascript-framework-node-js-real-time-web-framework-angle-text-logo.png",
+        imageSrc: "https://assets.website-files.com/5dd3f8176674eb0829f184d5/5dd41eb9049df81f8773946e_meteor-logo.svg",
       },
       {
         id: 5,
@@ -39,7 +39,7 @@ export default new Vuex.Store({
       {
         id: 7,
         name: "Polymer",
-        imageSrc: "https://cdn.imgbin.com/24/7/21/imgbin-polymer-javascript-library-web-components-javascript-framework-others-2LPMkkSv2rsHHAZkKBffxwhhn.jpg",
+        imageSrc: "https://web-components-resources.appspot.com/assets/images/a-quick-polymer-intro.png",
       },
       {
         id: 8,

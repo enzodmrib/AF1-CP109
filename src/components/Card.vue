@@ -8,7 +8,9 @@
         :src="framework.framework.$attrs.framework.imageSrc"
         alt="Framework"
       />
-      <div v-if="!!framework" class="card__name"></div>
+    </div>
+    <div v-if="!!framework" class="card__name">
+      {{ framework.framework.$attrs.framework.name }}
     </div>
   </v-card>
 </template>
@@ -25,10 +27,10 @@ export default {
 
 <style>
 .card {
-  position: relative;
+  position: absolute;
 
   width: 90%;
-  height: 5rem;
+  height: 15rem;
   min-width: 90%;
   min-height: 8rem;
 
@@ -40,7 +42,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-items: center;
 }
 
 .card .framework {
@@ -54,6 +56,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+}
+
+.card__name {
+  position: absolute;
 }
 
 .card__image img {
