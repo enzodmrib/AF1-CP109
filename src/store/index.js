@@ -8,12 +8,12 @@ export default new Vuex.Store({
     listPokemon: [
       {
         id: 1,
-        name:"angular",
+        name:"Angular",
         imageSrc: "https://w7.pngwing.com/pngs/620/322/png-transparent-angularjs-ruby-on-rails-typescript-web-application-icon-hacker-angle-triangle-logo.png",
       },
       {
         id: 2,
-        name:"react",
+        name:"React",
         imageSrc: "https://banner2.cleanpng.com/20180604/pol/kisspng-react-javascript-angularjs-ionic-atom-5b154be6709500.6532453515281223424611.jpg",
       },
       {

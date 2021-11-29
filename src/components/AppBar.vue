@@ -72,11 +72,6 @@ export default {
 
 <style lang="scss">
 #navbar {
-  .active-item {
-    .v-list-item__icon {
-      color: red !important;
-    }
-  }
   .v-navigation-drawer__border {
     width: 0 !important;
   }

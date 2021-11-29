@@ -1,6 +1,6 @@
 
 <template>
-  <v-card class="card" pkm-name="Vue">
+  <v-card class="card" name="Vue">
     <div class="card__image">
       <img v-if="!framework" src="../assets/logo.png" alt="Framework" />
       <img
@@ -8,7 +8,7 @@
         :src="framework.framework.$attrs.framework.imageSrc"
         alt="Framework"
       />
-      <div v-if="!!framework" class="pkm-card__name">
+      <div v-if="!!framework" class="card__name">
         {{ framework.framework.$attrs.framework.name }}
       </div>
     </div>
