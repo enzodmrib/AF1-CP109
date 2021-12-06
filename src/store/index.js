@@ -49,7 +49,7 @@ export default new Vuex.Store({
       {
         id: 9,
         name: "Backbone.js",
-        imageSrc: "https://lh3.googleusercontent.com/proxy/PphALRWOLLUwnCEXhI_Ng8Bgu22WkLsKvmr9C-Z1iuBoNcGyhpqWF4CjKgPzpHtqpsBw7yOKqWKZF-DDkIl9R_kU3dqpDw5dSMT-nXw7",
+        imageSrc: "https://logowik.com/content/uploads/images/851_backbone.jpg",
       }
     ], loading: false
   },
@@ -58,19 +58,17 @@ export default new Vuex.Store({
       const frameworkData = [
         { id: 10, 
           name: "Svelte",
-          imageSrc: "https://res.cloudinary.com/practicaldev/image/fetch/s--kPA4Qalw--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://thepracticaldev.s3.amazonaws.com/i/2122og107osp0klb5h10.png"
+          imageSrc: "https://i2.wp.com/www.admixweb.com/wp-content/uploads/2020/05/svelte.png?resize=768%2C600&ssl=1"
         },
         { id: 11, 
           name: "Jquery",
-          imageSrc: "https://brandlogos.net/wp-content/uploads/2014/10/jquery-logo-vector-download.jpg"
+          imageSrc: "https://i2.wp.com/www.admixweb.com/wp-content/uploads/2020/05/svelte.png?resize=768%2C600&ssl=1"
         },
         { id: 12, 
           name: "Sencha Ext JS",
-          imageSrc: "https://www.sencha.com/wp-content/uploads/2018/11/icon-product-ExtJS.png"
+          imageSrc: "https://i2.wp.com/www.admixweb.com/wp-content/uploads/2020/05/svelte.png?resize=768%2C600&ssl=1"
         }
       ]
-
-      console.log(frameworkData)
 
       state.list.push({
         id: frameworkID,
