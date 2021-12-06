@@ -55,22 +55,20 @@ export default new Vuex.Store({
   },
   mutations: {
     async addFrameworkByID(state, frameworkID) {
-      const frameworkData = async () => {
-        [
-          { id: 10, 
-            name: "Svelte",
-            imageSrc: "https://res.cloudinary.com/practicaldev/image/fetch/s--kPA4Qalw--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://thepracticaldev.s3.amazonaws.com/i/2122og107osp0klb5h10.png"
-          },
-          { id: 11, 
-            name: "Jquery",
-            imageSrc: "https://brandlogos.net/wp-content/uploads/2014/10/jquery-logo-vector-download.jpg"
-          },
-          { id: 12, 
-            name: "Sencha Ext JS",
-            imageSrc: "https://www.sencha.com/wp-content/uploads/2018/11/icon-product-ExtJS.png"
-          }
-        ]
-      }
+      const frameworkData = [
+        { id: 10, 
+          name: "Svelte",
+          imageSrc: "https://res.cloudinary.com/practicaldev/image/fetch/s--kPA4Qalw--/c_imagga_scale,f_auto,fl_progressive,h_720,q_auto,w_1280/https://thepracticaldev.s3.amazonaws.com/i/2122og107osp0klb5h10.png"
+        },
+        { id: 11, 
+          name: "Jquery",
+          imageSrc: "https://brandlogos.net/wp-content/uploads/2014/10/jquery-logo-vector-download.jpg"
+        },
+        { id: 12, 
+          name: "Sencha Ext JS",
+          imageSrc: "https://www.sencha.com/wp-content/uploads/2018/11/icon-product-ExtJS.png"
+        }
+      ]
 
       console.log(frameworkData)
 
