@@ -22,18 +22,30 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 import Card from "@/components/Card";
 
 export default {
   data: () => ({
     loading: true,
+    countFrameworksToAdd: 3,
   }),
   components: {
     Card,
   },
   computed: mapState(["list"]),
+  methods: {
+    ...mapActions(['addRandomFramework']),
+  },
+  
   mounted() {
+
+    let i = 0;
+    while(i < this.countFrameworksToAdd){
+      this.addRandomFramework();
+      i += 1;
+    }
+
     setTimeout(() => {
       this.loading = false;
     }, 5000);

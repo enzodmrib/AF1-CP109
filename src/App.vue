@@ -2,9 +2,9 @@
   <v-app>
     <SystemBar></SystemBar>
     <AppBar></AppBar>
-    <v-content :class="{ 'content-bg': true }">
+    <v-main :class="{ 'content-bg': true }">
       <router-view></router-view>
-    </v-content>
+    </v-main>
     <Footer></Footer>
     <BottomNavigation></BottomNavigation>
   </v-app>
